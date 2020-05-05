@@ -38,7 +38,7 @@ class ExampleTest extends PHPUnit_Framework_TestCase
         $cache = $this->prophesize(RussianCache::class);
         $directive = new BladeDirective($cache->reveal());
 
-        
+
         $cache->has(md5('foobar'))->shouldBeCalled();
 
 
